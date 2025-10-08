@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Sparkles, Globe, Heart } from "lucide-react";
+import { Sparkles, Globe, Heart, Code, Database, Shield, Zap } from "lucide-react";
 
 export default function About() {
   return (
@@ -74,6 +74,79 @@ export default function About() {
               Constantly evolving with new features and integrations for the Mongolian ecosystem
             </p>
           </Card>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
+            Technical Architecture
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="p-6" data-testid="card-tech-stack">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-stellar-blue/10 flex items-center justify-center">
+                  <Code className="w-6 h-6 text-stellar-blue" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground">Technology Stack</h3>
+              </div>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><span className="text-foreground font-semibold">Language:</span> Python 3.11</li>
+                <li><span className="text-foreground font-semibold">Framework:</span> Discord.py (Slash commands)</li>
+                <li><span className="text-foreground font-semibold">Database:</span> SQLite (file-based)</li>
+                <li><span className="text-foreground font-semibold">Payment API:</span> QPay Mongolia</li>
+                <li><span className="text-foreground font-semibold">AI Engine:</span> OpenAI GPT-4o</li>
+                <li><span className="text-foreground font-semibold">Charts:</span> QuickChart.io API</li>
+              </ul>
+            </Card>
+
+            <Card className="p-6" data-testid="card-deployment">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-stellar-orange/10 flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-stellar-orange" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground">Deployment</h3>
+              </div>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><span className="text-foreground font-semibold">Production:</span> Railway hosting with production.db</li>
+                <li><span className="text-foreground font-semibold">Testing:</span> Replit environment with test pricing</li>
+                <li><span className="text-foreground font-semibold">Prices:</span> Auto-switch via environment variables</li>
+                <li><span className="text-foreground font-semibold">Database:</span> Separate test/production databases</li>
+                <li><span className="text-foreground font-semibold">Uptime:</span> 24/7 availability with auto-recovery</li>
+              </ul>
+            </Card>
+
+            <Card className="p-6" data-testid="card-database">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                  <Database className="w-6 h-6 text-purple-500" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground">Database Structure</h3>
+              </div>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><span className="text-foreground font-semibold">servers:</span> Subscription data & balance tracking</li>
+                <li><span className="text-foreground font-semibold">plans:</span> Role pricing & descriptions</li>
+                <li><span className="text-foreground font-semibold">memberships:</span> User role assignments & expiry</li>
+                <li><span className="text-foreground font-semibold">payments:</span> Transaction history & QPay IDs</li>
+                <li><span className="text-foreground font-semibold">payouts:</span> Admin payout requests & status</li>
+                <li><span className="text-foreground font-semibold">manager_roles:</span> Permission system</li>
+              </ul>
+            </Card>
+
+            <Card className="p-6" data-testid="card-security">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-green-500" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground">Security Features</h3>
+              </div>
+              <ul className="space-y-2 text-muted-foreground">
+                <li><span className="text-foreground font-semibold">Permissions:</span> Admin/Manager/User hierarchy</li>
+                <li><span className="text-foreground font-semibold">Payment Verification:</span> Real-time QPay checks</li>
+                <li><span className="text-foreground font-semibold">Database Integrity:</span> Foreign key constraints</li>
+                <li><span className="text-foreground font-semibold">Environment Secrets:</span> Secure API key management</li>
+                <li><span className="text-foreground font-semibold">Owner Commands:</span> Critical operations protected</li>
+              </ul>
+            </Card>
+          </div>
         </div>
 
         <div className="bg-card rounded-lg p-8 md:p-12 text-center">
