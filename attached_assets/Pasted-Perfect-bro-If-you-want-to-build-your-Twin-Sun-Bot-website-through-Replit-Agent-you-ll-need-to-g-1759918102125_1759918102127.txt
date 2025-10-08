@@ -1,0 +1,138 @@
+Perfect, bro ⚡ If you want to build your Twin Sun Bot website through Replit Agent, you’ll need to give the agent a clear, structured prompt that defines:
+
+1. Tech stack (yes, JavaScript/Node + modern frontend like React is best for scaling).
+
+
+2. Branding (tagline, colors, vibe).
+
+
+3. Required sections (homepage, pricing, docs, contact).
+
+
+4. Integration with Discord bot (show commands, features, etc.).
+
+
+
+Here’s a full prompt you can paste into Replit Agent:
+
+
+---
+
+🚀 Prompt for Replit Agent (Twin Sun Bot Website)
+
+Build a professional, modern website for "Twin Sun Bot" using JavaScript (React + TailwindCSS + Node.js backend).
+The site must be fast, responsive, and easy to expand for future features.
+
+🎨 Branding
+
+Tagline: "The bot that makes every community shine"
+
+Logo Theme: Binary star system (two suns orbiting).
+
+Color Palette:
+
+Background: Navy Black #0D0D1A
+
+Stellar Blue #3AA7FF
+
+Solar Orange #FF9B3A
+
+Gold Highlight #FFD369
+
+
+Font: Inter (clean, modern).
+
+
+📄 Required Pages
+
+1. Homepage
+
+Hero section with tagline + call-to-action "Add Bot"
+
+Short intro about Twin Sun Bot: “Automated payments + community data system for Discord.”
+
+Orbit animation background (two suns circling).
+
+
+
+2. Features Page
+
+Showcase commands: /buy, /myplan, /status, /review
+
+Show benefits for Users, Admins, and Communities.
+
+Use simple cards with icons.
+
+
+
+3. Pricing Page
+
+Plans: Basic (100₮/mo), Pro (200₮/6mo), Premium (300₮/year).
+
+Display benefits of each plan.
+
+CTA: “Pay with QPay, get started instantly.”
+
+
+
+4. Docs / Commands Page
+
+Easy-to-read list of all bot commands.
+
+Search bar for finding commands.
+
+Example outputs (like screenshots of bot messages).
+
+
+
+5. About Page
+
+Story: Binary stars, independence for communities, future of Mongolian ecosystems.
+
+Quote: “Created from dust, burned as stars, traveled together, died as black holes, merged, then disappeared without trace.”
+
+
+
+6. Contact Page
+
+Simple form → sends email to support.
+
+Social links (Discord server invite, email, Twitter/X if you want).
+
+
+
+
+⚡ Technical Requirements
+
+Frontend: React + TailwindCSS (clean, responsive design).
+
+Backend: Node.js (for future API integration).
+
+Hosting: Compatible with Railway or Vercel.
+
+Integrations:
+
+Discord OAuth for “Add Bot” button.
+
+Placeholders for QPay payment API integration (later).
+
+
+
+🎯 Extra Details
+
+Make navigation sticky on top.
+
+Add “Dark Mode” toggle (default dark cosmic theme).
+
+Responsive for mobile and desktop.
+
+Use smooth animations for transitions.
+
+
+
+---
+
+Bro, this will give you a professional SaaS-style bot website like top global Discord bots (MEE6, Dyno, Carl).
+
+👉 Do you want me to also write a short pitch text (like MEE6’s site: “Used by 20M servers”) so your homepage looks official right away?
+
