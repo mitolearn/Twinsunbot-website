@@ -1,51 +1,62 @@
-import CommandCard from "@/components/CommandCard";
 import { Card } from "@/components/ui/card";
-import { ShoppingCart, FileText, Activity, Star, Users, CreditCard, BarChart3, Bell } from "lucide-react";
+import { Users, CreditCard, BarChart3, Bell, DollarSign, Brain, Shield, MessageSquare, Layers, TrendingUp, Repeat, FileEdit } from "lucide-react";
 
 export default function Features() {
-  const commands = [
-    {
-      icon: ShoppingCart,
-      command: "/buy",
-      description: "Purchase a subscription plan with QPay integration. Supports monthly, 6-month, and yearly plans with automatic renewal.",
-    },
-    {
-      icon: FileText,
-      command: "/myplan",
-      description: "View your current subscription details, renewal date, payment history, and upgrade options.",
-    },
-    {
-      icon: Activity,
-      command: "/status",
-      description: "Check bot status, server uptime, community statistics, and real-time analytics dashboard.",
-    },
-    {
-      icon: Star,
-      command: "/review",
-      description: "Leave a review and rate your experience. Help us improve and share your feedback with the community.",
-    },
-  ];
-
   const features = [
     {
-      icon: CreditCard,
-      title: "QPay Integration",
-      description: "Seamless payment processing with QPay. Support for all major Mongolian payment methods with instant confirmation.",
-    },
-    {
-      icon: BarChart3,
-      title: "Analytics Dashboard",
-      description: "Track community growth, payment trends, and user engagement with detailed analytics and reports.",
-    },
-    {
       icon: Users,
-      title: "Community Management",
-      description: "Automated user role assignment based on subscription tiers. Easy member management and moderation tools.",
+      title: "Multi-Role Membership System",
+      description: "Users can purchase and hold multiple roles simultaneously, each with independent expiry dates. Smart expiry handling ensures active roles remain untouched when others expire.",
+    },
+    {
+      icon: CreditCard,
+      title: "QPay Payment Integration",
+      description: "Real-time payment processing with QPay Mongolia. Automatic invoice generation, instant payment verification, and immediate role assignment upon confirmation.",
+    },
+    {
+      icon: MessageSquare,
+      title: "DM Renewal System",
+      description: "Complete payment flow works in Direct Messages. 3-day expiry warnings, renewal options, and smart time extension that never loses existing days when renewing early.",
+    },
+    {
+      icon: Layers,
+      title: "Dual Purchase Flow",
+      description: "Members can buy roles via admin-posted /paywall buttons in channels, or privately with /buy command. Flexible purchasing options for every use case.",
+    },
+    {
+      icon: DollarSign,
+      title: "Revenue & Payout System",
+      description: "Admins keep 97% of role sales (3% platform fee). Track revenue with /status, request payouts (min 100,000₮) with bank details, and get instant confirmation when processed.",
+    },
+    {
+      icon: Brain,
+      title: "AI-Powered Analytics (GPT-4o)",
+      description: "Growth dashboard with 30-day revenue charts, pie charts, and AI business recommendations. Weekly automated reports every Monday with actionable insights.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Advanced Analytics Suite",
+      description: "Top members leaderboard, revenue breakdown by plan, growth percentage tracking, and real-time member activity monitoring.",
+    },
+    {
+      icon: Shield,
+      title: "Manager Role System",
+      description: "Three permission levels: Admin (full access), Manager (view-only analytics), and User (purchase only). Flexible team management for large communities.",
     },
     {
       icon: Bell,
-      title: "Smart Notifications",
-      description: "Automated reminders for subscription renewals, payment confirmations, and important updates.",
+      title: "Smart Expiry Notifications",
+      description: "Automated DM warnings 3 days before role expiration. Two renewal options: QPay payment or pay with collected balance. Never miss a renewal.",
+    },
+    {
+      icon: Repeat,
+      title: "Bot Subscription System",
+      description: "Rent the bot with tiered subscriptions (Basic/Pro/Premium). Automatic expiry warnings, flexible renewal options (QPay or balance), and seamless 30-day access periods.",
+    },
+    {
+      icon: FileEdit,
+      title: "Plan Description System",
+      description: "Add custom marketing descriptions to your role plans. Explain benefits and perks to buyers in /buy, /paywall, and renewal DMs. Edit anytime to optimize conversions.",
     },
   ];
 
@@ -57,21 +68,12 @@ export default function Features() {
             Powerful Features for Your Community
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Everything you need to manage payments, track data, and grow your Discord community
+            Everything you need to monetize your Discord community with automated role management and AI-powered analytics
           </p>
         </div>
 
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Bot Commands</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {commands.map((cmd) => (
-              <CommandCard key={cmd.command} {...cmd} />
-            ))}
-          </div>
-        </div>
-
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Key Features</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8">Core Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature) => (
               <Card key={feature.title} className="p-6 hover-elevate transition-all duration-300" data-testid={`card-feature-${feature.title.toLowerCase().replace(' ', '-')}`}>
