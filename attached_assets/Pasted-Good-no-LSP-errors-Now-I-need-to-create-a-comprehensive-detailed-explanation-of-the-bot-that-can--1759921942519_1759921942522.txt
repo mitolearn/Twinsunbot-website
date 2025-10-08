@@ -1,0 +1,378 @@
+Good, no LSP errors. Now I need to create a comprehensive, detailed explanation of the bot that can be used for website development. This should cover:
+
+Overview and purpose
+Core features with detailed explanations
+User flows (how things work step-by-step)
+Technical architecture
+Payment system details
+Role system and permissions
+All commands with descriptions
+Database structure
+Integration points
+Environment configuration
+This needs to be well-structured, detailed, and ready to copy-paste for a website developer.
+
+I'll create a comprehensive bot documentation for your website developer. Let me gather all the details:
+
+
+Documented bot explanation requirements
+Perfect! Here's a comprehensive explanation of your Discord bot that you can copy-paste for your website developer:
+
+Discord Community Management Bot - Complete Documentation
+🎯 Overview
+This is a production-ready Discord bot built for Mongolian community management with integrated QPay payment processing. The bot enables server admins to monetize their Discord communities by selling role-based memberships with automatic payment verification, expiry tracking, and commission management.
+
+💡 Core Concept
+The Bot Rental Model:
+
+Server admins "rent" the bot through tiered subscriptions (Basic/Pro/Premium)
+Admins create paid role plans and sell them to their community members
+The bot handles all payments through QPay Mongolia
+Admins collect revenue (minus 3% platform fee) through payout requests
+Owner manages all servers and approves payouts
+🔑 Key Features
+1. Multi-Role Membership System
+Independent Role Management: Users can purchase and hold multiple roles simultaneously
+Separate Expiry Dates: Each role has its own expiration timer
+Smart Expiry Handling: When one role expires, other active roles remain untouched
+Visual Status Indicators:
+🟢 Healthy (>7 days remaining)
+🟡 Expiring Soon (3-7 days)
+🔴 Expired (needs renewal)
+2. Dual Purchase Flow
+Users can buy roles in two ways:
+
+Option A: /paywall Command (Admin-Posted)
+
+Admin posts payment buttons in a channel
+Anyone can click and purchase
+Public marketplace experience
+Option B: /buy Command (User-Direct)
+
+Any user runs the command privately
+Gets ephemeral payment options
+Private purchase experience
+3. QPay Payment Integration
+Real-time Payment Processing: Live integration with QPay Mongolia API
+Automatic Invoice Generation: Creates unique payment links instantly
+Status Verification: Checks payment status directly from QPay
+Auto Role Assignment: Grants Discord roles immediately upon payment confirmation
+Payment Backup: /verifypayment command works when buttons fail
+4. DM Renewal System
+Complete payment flow works in Direct Messages:
+
+Expiry Warning Flow:
+
+Bot sends DM 3 days before role expires
+User chooses: "Renew Same Plan" OR "See Other Plans"
+If "See Other Plans": Full paywall menu appears in DM
+User selects plan → Gets QPay payment link
+User pays → Returns to DM → Clicks "Check Payment"
+Role automatically renewed with time extension
+Smart Time Extension:
+
+User with 5 days left + 30-day renewal = 35 days total
+Never lose existing time when renewing early
+5. Bot Subscription System
+Admins rent the bot with tiered pricing:
+
+Plan	Test Price	Production Price	Duration
+Basic	100₮	59,900₮	30 days
+Pro	200₮	149,900₮	30 days
+Premium	300₮	279,900₮	30 days
+Subscription Features:
+
+Automatic expiry warnings (3 days before)
+Two renewal options: QPay OR Pay with Collected Balance
+Bot stops working when subscription expires
+Helpful messages guide users to contact admin
+6. Revenue & Payout System
+Fee Structure:
+
+Role sales: 3% platform fee (Admin keeps 97%)
+Subscription payments: 0% platform fee
+Payout Process:
+
+Admin earns revenue from role sales
+Balance shown in /status command
+Minimum payout: 100,000₮
+Admin clicks "Request Payout" → Enters bank details
+Owner receives DM with payout request
+Owner reviews and marks as "Done"
+Both admin and owner receive confirmation DMs with transaction details
+7. AI-Powered Analytics (GPT-4o)
+Growth Dashboard (/growth command):
+
+Beautiful revenue trend charts (30-day line chart)
+Revenue breakdown by plan (pie chart with percentages)
+Growth percentage (comparing last 30 vs previous 30 days)
+Total revenue, available balance, active member count
+Top 5 performing role plans
+AI Business Advice: ChatGPT analyzes ALL server data and provides 2-3 specific, actionable recommendations
+Weekly Automated Reports:
+
+Sent every Monday at 21:00 UTC to all admins
+Same comprehensive data as /growth command
+AI-powered growth strategy recommendations
+Covers: revenue trends, top plans, member activity, subscription status
+8. Top Members Dashboard
+/topmembers command shows:
+
+Top 10 overall spenders (🥇🥈🥉 medals)
+Top 3 spenders per individual role plan
+Total revenue summary
+Member names and payment counts
+9. Plan Description System
+Admins add custom marketing descriptions to plans
+Descriptions explain benefits, perks, what members get
+Appears in: /buy embeds, /paywall embeds, payment confirmations, renewal DMs
+Editable anytime with /edit_plan_description
+10. Manager Role System
+Three permission levels:
+
+Admin: Full access (server owner + admins with admin permission)
+Manager: Limited access (set by admin, can view stats but cannot modify plans)
+User: Can only buy and view their own memberships
+📋 Complete Command List
+👥 User Commands
+Command	Description
+/buy	Browse and purchase role plans (ephemeral)
+/myplan	View all active memberships with expiry timers
+/verifypayment	Backup payment verification when buttons fail
+👔 Admin Commands
+Command	Description
+/plan_add	Create a new role plan with price and description
+/plan_list	View all role plans (shows display numbers + DB IDs)
+/plan_edit	Modify existing plan (role, price)
+/plan_delete	Delete a role plan
+/edit_plan_description	Update plan marketing description
+/paywall	Post payment buttons in channel for members to purchase
+/status	View revenue, balance, and request payout
+/growth	AI-powered analytics dashboard with charts and recommendations
+/topmembers	View top spenders and statistics
+/set_manager_role	Set a role as manager with limited permissions
+/view_manager_role	Check current manager role
+/remove_manager_role	Remove manager role permissions
+/bot_info	Complete bot guide with setup instructions
+👑 Owner Commands
+Command	Description
+/admin_list	View all servers using the bot
+/admin_info	Detailed server analytics (revenue, members, plans)
+/payout_requests	View pending payout requests
+/sync	Force refresh Discord command cache (fixes missing commands)
+🔄 User Flows
+Flow 1: Admin Setup (First Time)
+Admin invites bot to Discord server
+Bot prompts to choose subscription plan (Basic/Pro/Premium)
+Admin pays via QPay
+Bot activates for 30 days
+Admin creates role plans with /plan_add
+Admin posts payment buttons with /paywall
+Flow 2: Member Purchase
+Member sees payment buttons (or runs /buy)
+Clicks plan → Gets QPay payment link
+Pays through QPay (mobile banking/card)
+Returns to Discord → Clicks "Check Payment"
+Bot verifies payment → Assigns role instantly
+Member gets welcome message with expiry date
+Flow 3: Membership Renewal
+Bot sends DM 3 days before expiry
+Member chooses renewal option
+Payment flow completes in DM
+Time extends automatically (adds to existing time)
+Member keeps access uninterrupted
+Flow 4: Admin Payout
+Admin earns 97% of role sales revenue
+Checks balance with /status
+When balance ≥ 100,000₮: Clicks "Request Payout"
+Enters bank account details in modal
+Owner gets DM notification
+Owner reviews → Marks as "Done"
+Both receive confirmation DMs
+Flow 5: Subscription Renewal
+Bot sends DM to admin 3 days before expiry
+Admin chooses: QPay OR Pay with Collected Balance
+If QPay: Normal payment flow
+If Balance: Deducts from collected revenue
+Subscription extends automatically
+Bot continues operating
+🛠️ Technical Architecture
+Technology Stack
+Language: Python 3.11
+Framework: Discord.py (Slash commands)
+Database: SQLite (local file-based)
+Payment API: QPay Mongolia
+AI Engine: OpenAI GPT-4o
+Charts: QuickChart.io API
+Deployment: Railway (production), Replit (testing)
+Database Schema
+Tables:
+
+servers - Server subscriptions
+
+guild_id, subscription_type, expiry_date, balance
+plans - Role pricing plans
+
+plan_id, guild_id, role_id, role_name, price, description
+memberships - User role purchases
+
+membership_id, user_id, guild_id, plan_id, expiry_date, status
+payments - Payment transactions
+
+payment_id, user_id, guild_id, plan_id, amount, status, qpay_invoice_id
+payouts - Payout requests
+
+payout_id, guild_id, amount, bank_details, status, request_date
+manager_roles - Permission system
+
+guild_id, role_id
+Environment Configuration
+Required Environment Variables:
+
+DISCORD_TOKEN          # Bot authentication token
+QPAY_USERNAME          # QPay API username
+QPAY_PASSWORD          # QPay API password
+QPAY_INVOICE_CODE      # QPay merchant code
+OWNER_DISCORD_ID       # Bot owner's Discord ID
+OPENAI_API_KEY         # ChatGPT API key
+Environment-Specific Variables:
+
+DB_NAME                # Database file name (production.db for Railway)
+SUB_BASIC_PRICE        # Basic sub price (100₮ test, 59900₮ prod)
+SUB_PRO_PRICE          # Pro sub price (200₮ test, 149900₮ prod)
+SUB_PREMIUM_PRICE      # Premium sub price (300₮ test, 279900₮ prod)
+File Structure
+├── main.py                    # Bot entry point
+├── database.py                # Database operations
+├── cogs/
+│   ├── admin.py              # Admin commands
+│   ├── payment.py            # Payment processing
+│   ├── membership.py         # Role management
+│   ├── status.py             # Balance/payout
+│   ├── analytics.py          # Growth dashboard
+│   ├── weekly_reports.py     # Automated reports
+│   ├── subscription_checker.py # Expiry monitoring
+│   └── owner.py              # Owner commands
+└── database.db               # SQLite database
+🔐 Security Features
+Role-Based Permissions: Admin/Manager/User hierarchy
+Payment Verification: Real-time QPay status checks
+Database Integrity: Foreign key constraints
+Environment Secrets: Secure API key management
+Owner-Only Commands: Critical operations protected
+Null Safety: Comprehensive error handling
+⚡ Performance Optimizations
+Button Persistence: timeout=None - buttons never expire
+Fast AI Responses: GPT-4o with 150-token prompts (3-5 seconds)
+Efficient Database: Indexed queries for fast lookups
+Parallel Processing: Async operations for responsiveness
+Smart Caching: Minimizes Discord API calls
+🐛 Error Handling & Backups
+QPay Validation: Startup credential checks
+Payment Backup: /verifypayment when buttons fail
+Command Sync: /sync fixes missing commands
+Null Checks: Handles deleted roles/users/servers gracefully
+Database Backups: Separate test/production databases
+📊 Analytics & Reporting
+Real-time Metrics:
+
+Total revenue (all-time)
+Available balance (after 3% fee)
+Active member count (distinct users)
+Growth percentage (30-day comparison)
+Top-performing plans
+AI Analysis (GPT-4o):
+
+Revenue trend analysis
+Member engagement patterns
+Pricing optimization suggestions
+Marketing strategy recommendations
+Retention improvement tips
+Visual Charts:
+
+30-day revenue line chart
+Plan distribution pie chart
+Auto-generated via QuickChart.io
+🚀 Deployment
+Two Environments:
+
+Testing (Replit)
+
+Test prices: 100₮/200₮/300₮
+Database: database.db
+For development and testing
+Production (Railway)
+
+Real prices: 59,900₮/149,900₮/279,900₮
+Database: production.db
+Live payment processing
+Environment Variables Auto-Switch:
+
+Same codebase works in both environments
+Prices controlled by environment variables
+No risk of test prices in production
+📱 Platform Integration
+Discord Requirements:
+
+Bot needs Administrator permission
+Bot role must be above managed roles
+Message content intent enabled
+Member intent enabled
+QPay Requirements:
+
+Active QPay merchant account
+Invoice code for payment generation
+API credentials (username/password)
+OpenAI Requirements:
+
+OpenAI API key
+GPT-4o model access
+🎨 User Experience Highlights
+Intuitive Commands: Clear slash command descriptions
+Beautiful Embeds: Color-coded, emoji-enhanced messages
+Real-time Updates: Instant payment confirmations
+Smart Notifications: Timely expiry warnings
+DM Support: Complete payment flow in private messages
+Error Recovery: Backup commands when buttons fail
+Mobile-Friendly: Works perfectly on Discord mobile app
+💼 Business Model
+Revenue Streams:
+
+Platform Fee: 3% of all role sales
+Subscription Revenue: 0% fee (pure revenue for owner)
+Admin Benefits:
+
+Keep 97% of role sales
+Automated payment processing
+AI-powered growth insights
+Payout requests anytime (100k₮ minimum)
+Member Benefits:
+
+Secure QPay payments
+Instant role access
+Automatic renewal reminders
+Multi-role support
+🔧 Maintenance & Support
+Automated Systems:
+
+Daily membership expiry checks
+Weekly AI-powered reports
+Subscription expiry warnings
+Payment status monitoring
+Manual Operations:
+
+Payout approvals (owner)
+Plan creation (admin)
+Manager role assignment (admin)
+Troubleshooting:
+
+/bot_info - Complete setup guide
+/sync - Fix missing commands
+/verifypayment - Payment backup
+Comprehensive error messages
+📈 Scalability
+Multi-Server: Owner manages unlimited servers
+Concurrent Users: Handles simultaneous purchases
+Database Growth: SQLite supports millions of records
+API Rate Limits: Optimized Discord API usage
+Payment Queue: Sequential QPay invoice creation
