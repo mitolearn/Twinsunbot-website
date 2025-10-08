@@ -97,18 +97,6 @@ export default function BinaryStarOrbit() {
       ctx.fillStyle = gradient2;
       ctx.fill();
 
-      const energyGradient = ctx.createLinearGradient(sun1X, sun1Y, sun2X, sun2Y);
-      energyGradient.addColorStop(0, "rgba(100, 220, 255, 0.4)");
-      energyGradient.addColorStop(0.5, "rgba(200, 200, 255, 0.3)");
-      energyGradient.addColorStop(1, "rgba(255, 180, 60, 0.4)");
-
-      ctx.beginPath();
-      ctx.moveTo(sun1X, sun1Y);
-      ctx.lineTo(sun2X, sun2Y);
-      ctx.strokeStyle = energyGradient;
-      ctx.lineWidth = 3;
-      ctx.stroke();
-
       for (let i = 0; i < 80; i++) {
         const particleAngle = (angle * 1.5 + i * 0.08) % (Math.PI * 2);
         const particleRadius = orbitRadius * 1.3;
