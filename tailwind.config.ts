@@ -82,13 +82,13 @@ export default {
           offline: "rgb(156 163 175)",
         },
         stellar: {
-          blue: "hsl(202 100% 62% / <alpha-value>)",
+          blue: "hsl(190 100% 65% / <alpha-value>)",
         },
         solar: {
-          orange: "hsl(28 100% 62% / <alpha-value>)",
+          orange: "hsl(35 100% 55% / <alpha-value>)",
         },
         gold: {
-          DEFAULT: "hsl(45 100% 71% / <alpha-value>)",
+          DEFAULT: "hsl(45 100% 60% / <alpha-value>)",
         },
       },
       fontFamily: {

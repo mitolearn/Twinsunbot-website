@@ -31,10 +31,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-4">
           <Link href="/" className="flex items-center gap-3" data-testid="link-home">
-            <div className="relative w-8 h-8">
-              <div className="absolute inset-0 bg-stellar-blue rounded-full blur-sm opacity-70"></div>
-              <div className="absolute inset-0 bg-stellar-blue rounded-full"></div>
-              <div className="absolute top-1 right-1 w-4 h-4 bg-solar-orange rounded-full"></div>
+            <div className="relative w-10 h-10">
+              <div className="absolute top-0 left-0 w-5 h-5 bg-stellar-blue rounded-full blur-sm"></div>
+              <div className="absolute top-0 left-0 w-5 h-5 bg-stellar-blue rounded-full"></div>
+              <div className="absolute bottom-0 right-0 w-5 h-5 bg-solar-orange rounded-full blur-sm"></div>
+              <div className="absolute bottom-0 right-0 w-5 h-5 bg-solar-orange rounded-full"></div>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-stellar-blue to-solar-orange bg-clip-text text-transparent">
               Twin Sun Bot
