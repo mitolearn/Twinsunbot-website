@@ -44,7 +44,7 @@ export default function BinaryStarOrbit() {
 
       const centerX = canvas.width / 2;
       const centerY = canvas.height / 2;
-      const orbitRadius = Math.min(canvas.width, canvas.height) * 0.18;
+      const orbitRadius = Math.min(canvas.width, canvas.height) * 0.28;
 
       angle += 0.003;
 
@@ -96,16 +96,6 @@ export default function BinaryStarOrbit() {
       ctx.arc(sun2X, sun2Y, 55, 0, Math.PI * 2);
       ctx.fillStyle = gradient2;
       ctx.fill();
-
-      ctx.save();
-      ctx.globalAlpha = 0.3;
-      ctx.strokeStyle = `rgba(150, 200, 255, 0.5)`;
-      ctx.lineWidth = 3;
-      ctx.setLineDash([15, 10]);
-      ctx.beginPath();
-      ctx.arc(centerX, centerY, orbitRadius, 0, Math.PI * 2);
-      ctx.stroke();
-      ctx.restore();
 
       const energyGradient = ctx.createLinearGradient(sun1X, sun1Y, sun2X, sun2Y);
       energyGradient.addColorStop(0, "rgba(100, 220, 255, 0.4)");
