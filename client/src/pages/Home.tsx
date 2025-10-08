@@ -1,86 +1,84 @@
 import { Button } from "@/components/ui/button";
 import BinaryStarOrbit from "@/components/BinaryStarOrbit";
-import CommandCard from "@/components/CommandCard";
 import PricingCard from "@/components/PricingCard";
-import { ShoppingCart, FileText, Activity, Star, Users, Shield, Zap } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { CreditCard, Brain, DollarSign, MessageSquare, Users, Shield, Zap } from "lucide-react";
 
 export default function Home() {
-  const commands = [
+  const keyFeatures = [
     {
-      icon: ShoppingCart,
-      command: "/buy",
-      description: "Purchase a subscription plan with QPay integration",
+      icon: CreditCard,
+      title: "QPay Integration",
+      description: "Real-time payment processing with automatic role assignment",
     },
     {
-      icon: FileText,
-      command: "/myplan",
-      description: "View your current subscription details and status",
+      icon: Brain,
+      title: "AI Analytics",
+      description: "GPT-4o powered insights with weekly automated reports",
     },
     {
-      icon: Activity,
-      command: "/status",
-      description: "Check bot status and community analytics",
+      icon: DollarSign,
+      title: "97% Revenue Share",
+      description: "Keep nearly all profits with easy payout requests",
     },
     {
-      icon: Star,
-      command: "/review",
-      description: "Leave a review and rate your experience",
+      icon: MessageSquare,
+      title: "DM Renewals",
+      description: "Automatic renewal reminders with smart time extension",
     },
   ];
 
   const benefits = [
     {
       icon: Users,
-      title: "For Users",
-      description: "Easy subscription management with QPay integration for seamless payments",
+      title: "For Members",
+      description: "Buy and manage multiple role memberships with QPay. Automatic DM renewals and expiry warnings keep you in the loop.",
     },
     {
       icon: Shield,
       title: "For Admins",
-      description: "Complete community data system with automated payment tracking",
+      description: "Rent the bot, create role plans, and earn 97% of every sale. AI analytics and payout requests make revenue management effortless.",
     },
     {
       icon: Zap,
       title: "For Communities",
-      description: "Independent payment ecosystem built for Mongolian Discord servers",
+      description: "Complete monetization platform built for Mongolian Discord servers with native QPay integration and automated management.",
     },
   ];
 
   const pricingPlans = [
     {
       name: "Basic",
-      price: "100",
-      period: "month",
+      price: "59,900",
+      period: "30 days",
       features: [
-        "Access to core bot commands",
+        "Complete bot access",
         "QPay payment integration",
-        "Basic community analytics",
-        "Email support",
+        "Multi-role membership system",
+        "Revenue tracking (97% to you)",
       ],
     },
     {
       name: "Pro",
-      price: "200",
-      period: "6 months",
+      price: "149,900",
+      period: "30 days",
       features: [
-        "All Basic features",
-        "Advanced payment tracking",
-        "Custom community reports",
-        "Priority support",
-        "API access",
+        "Everything in Basic",
+        "AI-powered analytics (GPT-4o)",
+        "Growth dashboard & charts",
+        "Weekly automated reports",
       ],
       isPremium: true,
     },
     {
       name: "Premium",
-      price: "300",
-      period: "year",
+      price: "279,900",
+      period: "30 days",
       features: [
-        "All Pro features",
-        "Dedicated server resources",
-        "Custom bot branding",
-        "24/7 premium support",
-        "Advanced analytics dashboard",
+        "Everything in Pro",
+        "Advanced AI insights",
+        "Payout requests (min 100k₮)",
+        "Dedicated support",
       ],
     },
   ];
@@ -94,10 +92,10 @@ export default function Home() {
             Twin Sun Bot
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-            The bot that makes every community shine
+            Monetize Your Discord Community with Ease
           </p>
           <p className="text-lg text-foreground/80 mb-8 max-w-2xl mx-auto">
-            Automated payments + community data system for Discord
+            Automated role sales • QPay integration • AI-powered analytics • Keep 97% of revenue
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg" data-testid="button-hero-add-bot">
@@ -114,15 +112,21 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Powerful Bot Commands
+              Why Twin Sun Bot?
             </h2>
             <p className="text-lg text-muted-foreground">
-              Everything you need to manage your community
+              Everything you need to monetize your Discord community
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {commands.map((cmd) => (
-              <CommandCard key={cmd.command} {...cmd} />
+            {keyFeatures.map((feature) => (
+              <Card key={feature.title} className="p-6 hover-elevate transition-all duration-300" data-testid={`card-feature-${feature.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                <div className="w-12 h-12 rounded-lg bg-stellar-blue/10 flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-stellar-blue" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground">{feature.description}</p>
+              </Card>
             ))}
           </div>
         </div>
