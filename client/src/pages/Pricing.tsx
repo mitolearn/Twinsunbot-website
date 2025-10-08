@@ -133,6 +133,66 @@ export default function Pricing() {
           </Card>
         </div>
 
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
+            How the Business Model Works
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8" data-testid="card-revenue-model">
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Revenue Sharing</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-full bg-stellar-blue/20 flex items-center justify-center text-stellar-blue font-bold shrink-0">97%</div>
+                  <div>
+                    <p className="font-semibold text-foreground">Admin Revenue</p>
+                    <p className="text-sm text-muted-foreground">You keep 97% of all role sales in your community</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-full bg-stellar-orange/20 flex items-center justify-center text-stellar-orange font-bold shrink-0">3%</div>
+                  <div>
+                    <p className="font-semibold text-foreground">Platform Fee</p>
+                    <p className="text-sm text-muted-foreground">Small fee covers bot hosting and development</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-500 font-bold shrink-0">0%</div>
+                  <div>
+                    <p className="font-semibold text-foreground">Subscription Fee</p>
+                    <p className="text-sm text-muted-foreground">No platform fee on your bot subscription payments</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8" data-testid="card-payout-process">
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Payout Process</h3>
+              <ol className="space-y-4 list-decimal list-inside">
+                <li className="text-foreground">
+                  <span className="font-semibold">Earn Revenue</span>
+                  <p className="text-sm text-muted-foreground ml-6 mt-1">Members buy roles, you earn 97% of each sale</p>
+                </li>
+                <li className="text-foreground">
+                  <span className="font-semibold">Track Balance</span>
+                  <p className="text-sm text-muted-foreground ml-6 mt-1">Check available balance with /status command</p>
+                </li>
+                <li className="text-foreground">
+                  <span className="font-semibold">Request Payout</span>
+                  <p className="text-sm text-muted-foreground ml-6 mt-1">Minimum 100,000₮ - enter bank details via modal</p>
+                </li>
+                <li className="text-foreground">
+                  <span className="font-semibold">Get Approved</span>
+                  <p className="text-sm text-muted-foreground ml-6 mt-1">Owner reviews and processes your request</p>
+                </li>
+                <li className="text-foreground">
+                  <span className="font-semibold">Receive Confirmation</span>
+                  <p className="text-sm text-muted-foreground ml-6 mt-1">Both parties get DM with transaction details</p>
+                </li>
+              </ol>
+            </Card>
+          </div>
+        </div>
+
         <div className="bg-card rounded-lg p-8 md:p-12 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">
             All Plans Include QPay Integration
