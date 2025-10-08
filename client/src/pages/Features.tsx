@@ -91,6 +91,81 @@ export default function Features() {
           </div>
         </div>
 
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">How It Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="p-6" data-testid="card-flow-admin-setup">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full bg-stellar-blue/20 flex items-center justify-center text-stellar-blue font-bold">1</div>
+                <h3 className="text-lg font-semibold text-foreground">Admin Setup</h3>
+              </div>
+              <ol className="space-y-2 text-sm text-muted-foreground list-decimal list-inside">
+                <li>Invite bot to Discord server</li>
+                <li>Choose subscription plan (Basic/Pro/Premium)</li>
+                <li>Pay via QPay - bot activates for 30 days</li>
+                <li>Create role plans with /plan_add</li>
+                <li>Post payment buttons with /paywall</li>
+              </ol>
+            </Card>
+
+            <Card className="p-6" data-testid="card-flow-member-purchase">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full bg-stellar-blue/20 flex items-center justify-center text-stellar-blue font-bold">2</div>
+                <h3 className="text-lg font-semibold text-foreground">Member Purchase</h3>
+              </div>
+              <ol className="space-y-2 text-sm text-muted-foreground list-decimal list-inside">
+                <li>Member sees buttons or runs /buy</li>
+                <li>Selects plan → gets QPay link</li>
+                <li>Pays through QPay (mobile/card)</li>
+                <li>Returns → clicks "Check Payment"</li>
+                <li>Bot verifies → assigns role instantly</li>
+              </ol>
+            </Card>
+
+            <Card className="p-6" data-testid="card-flow-renewal">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full bg-stellar-blue/20 flex items-center justify-center text-stellar-blue font-bold">3</div>
+                <h3 className="text-lg font-semibold text-foreground">Membership Renewal</h3>
+              </div>
+              <ol className="space-y-2 text-sm text-muted-foreground list-decimal list-inside">
+                <li>Bot sends DM 3 days before expiry</li>
+                <li>Member chooses renewal option</li>
+                <li>Payment flow completes in DM</li>
+                <li>Time extends automatically (adds to existing)</li>
+                <li>Member keeps access uninterrupted</li>
+              </ol>
+            </Card>
+
+            <Card className="p-6" data-testid="card-flow-payout">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full bg-stellar-orange/20 flex items-center justify-center text-stellar-orange font-bold">4</div>
+                <h3 className="text-lg font-semibold text-foreground">Admin Payout</h3>
+              </div>
+              <ol className="space-y-2 text-sm text-muted-foreground list-decimal list-inside">
+                <li>Admin earns 97% of role sales</li>
+                <li>Checks balance with /status</li>
+                <li>When ≥100,000₮: clicks "Request Payout"</li>
+                <li>Enters bank details in modal</li>
+                <li>Owner approves → both get DM confirmation</li>
+              </ol>
+            </Card>
+
+            <Card className="p-6" data-testid="card-flow-subscription">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full bg-stellar-orange/20 flex items-center justify-center text-stellar-orange font-bold">5</div>
+                <h3 className="text-lg font-semibold text-foreground">Subscription Renewal</h3>
+              </div>
+              <ol className="space-y-2 text-sm text-muted-foreground list-decimal list-inside">
+                <li>Bot DMs admin 3 days before expiry</li>
+                <li>Choose: QPay OR Pay with Balance</li>
+                <li>If Balance: deducts from revenue</li>
+                <li>Subscription extends automatically</li>
+                <li>Bot continues operating seamlessly</li>
+              </ol>
+            </Card>
+          </div>
+        </div>
+
         <div className="bg-card rounded-lg p-8 md:p-12">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
