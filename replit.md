@@ -5,7 +5,7 @@
 Twin Sun Bot is a comprehensive marketing and documentation website for a production-ready Discord bot rental platform designed for Mongolian communities. The bot enables server admins to monetize their Discord communities through role-based membership sales with automated QPay payment processing.
 
 **Bot Rental Model:**
-- Admins "rent" the bot through tiered subscriptions (Basic: 59,900₮/30 days, Pro: 149,900₮/3 months, Premium: 279,900₮/180 days)
+- Admins "rent" the bot through tiered subscriptions (Basic: 59,900₮/1 month, Pro: 149,900₮/3 months, Premium: 279,900₮/6 months)
 - Create paid role plans and sell them to community members
 - Automated payment verification and role assignment via QPay Mongolia
 - Admins earn 97% of role sales (3% platform fee)

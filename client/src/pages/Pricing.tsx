@@ -7,9 +7,9 @@ export default function Pricing() {
     {
       name: "Basic",
       price: "59,900",
-      period: "30 days",
+      period: "1 month",
       features: [
-        "Complete bot access for 30 days",
+        "Complete bot access for 1 month",
         "QPay payment integration",
         "Multi-role membership system",
         "Automated role assignment",
@@ -25,7 +25,7 @@ export default function Pricing() {
       period: "3 months",
       features: [
         "Everything in Basic",
-        "Complete bot access for 90 days",
+        "Complete bot access for 3 months",
         "AI-powered analytics (GPT-4o)",
         "Growth dashboard with charts",
         "Top members leaderboard",
@@ -39,7 +39,7 @@ export default function Pricing() {
     {
       name: "Premium",
       price: "279,900",
-      period: "180 days",
+      period: "6 months",
       features: [
         "Everything in Pro",
         "Complete bot access for 6 months",
@@ -60,11 +60,11 @@ export default function Pricing() {
     { name: "Automated Role Assignment", basic: true, pro: true, premium: true },
     { name: "DM Renewal System", basic: true, pro: true, premium: true },
     { name: "Revenue Tracking (97% to you)", basic: true, pro: true, premium: true },
+    { name: "Payout Requests", basic: true, pro: true, premium: true },
     { name: "AI-Powered Analytics (GPT-4o)", basic: false, pro: true, premium: true },
     { name: "Growth Dashboard & Charts", basic: false, pro: true, premium: true },
     { name: "Weekly Automated Reports", basic: false, pro: true, premium: true },
     { name: "Manager Role System", basic: false, pro: true, premium: true },
-    { name: "Payout Requests", basic: false, pro: false, premium: true },
     { name: "Advanced AI Business Insights", basic: false, pro: false, premium: true },
     { name: "Dedicated Support", basic: false, pro: false, premium: true },
   ];
@@ -137,38 +137,10 @@ export default function Pricing() {
 
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            How the Business Model Works
+            Payout Process
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8" data-testid="card-revenue-model">
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Revenue Sharing</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-stellar-blue/20 flex items-center justify-center text-stellar-blue font-bold shrink-0">97%</div>
-                  <div>
-                    <p className="font-semibold text-foreground">Admin Revenue</p>
-                    <p className="text-sm text-muted-foreground">You keep 97% of all role sales in your community</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-stellar-orange/20 flex items-center justify-center text-stellar-orange font-bold shrink-0">3%</div>
-                  <div>
-                    <p className="font-semibold text-foreground">Platform Fee</p>
-                    <p className="text-sm text-muted-foreground">Small fee covers bot hosting and development</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center text-green-500 font-bold shrink-0">0%</div>
-                  <div>
-                    <p className="font-semibold text-foreground">Subscription Fee</p>
-                    <p className="text-sm text-muted-foreground">No platform fee on your bot subscription payments</p>
-                  </div>
-                </div>
-              </div>
-            </Card>
-
+          <div className="max-w-3xl mx-auto">
             <Card className="p-8" data-testid="card-payout-process">
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Payout Process</h3>
               <ol className="space-y-4 list-decimal list-inside">
                 <li className="text-foreground">
                   <span className="font-semibold">Earn Revenue</span>

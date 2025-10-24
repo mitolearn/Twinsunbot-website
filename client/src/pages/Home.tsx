@@ -3,6 +3,7 @@ import BinaryStarOrbit from "@/components/BinaryStarOrbit";
 import PricingCard from "@/components/PricingCard";
 import { Card } from "@/components/ui/card";
 import { CreditCard, Brain, DollarSign, MessageSquare, Users, Shield, Zap } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Home() {
   const keyFeatures = [
@@ -50,7 +51,7 @@ export default function Home() {
     {
       name: "Basic",
       price: "59,900",
-      period: "30 days",
+      period: "1 month",
       features: [
         "Complete bot access",
         "QPay payment integration",
@@ -73,7 +74,7 @@ export default function Home() {
     {
       name: "Premium",
       price: "279,900",
-      period: "180 days",
+      period: "6 months",
       features: [
         "Everything in Pro",
         "Advanced AI insights",
@@ -101,9 +102,11 @@ export default function Home() {
             <Button size="lg" className="text-lg" data-testid="button-hero-add-bot">
               Add Bot to Discord
             </Button>
-            <Button size="lg" variant="outline" className="text-lg" data-testid="button-hero-view-features">
-              View Features
-            </Button>
+            <Link href="/features">
+              <Button size="lg" variant="outline" className="text-lg" data-testid="button-hero-view-features">
+                View Features
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
