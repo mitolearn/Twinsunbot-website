@@ -149,39 +149,6 @@ export default function Commands() {
       example: "/verifypayment",
       output: "Manually checks your payment status with QPay and assigns role if payment confirmed",
     },
-    // Owner Commands
-    {
-      command: "/admin_list",
-      category: "Owner",
-      description: "View all Discord servers currently using the bot",
-      usage: "/admin_list",
-      example: "/admin_list",
-      output: "List of all servers with names, IDs, subscription tiers, and expiry dates",
-    },
-    {
-      command: "/admin_info",
-      category: "Owner",
-      description: "Detailed server analytics (revenue, active members, plan count)",
-      usage: "/admin_info [server_id]",
-      example: "/admin_info 123456789",
-      output: "Server overview: total revenue, member count, active plans, subscription status",
-    },
-    {
-      command: "/payout_requests",
-      category: "Owner",
-      description: "View all pending payout requests from server admins",
-      usage: "/payout_requests",
-      example: "/payout_requests",
-      output: "List of pending payouts with amounts, bank details, and 'Mark as Done' buttons",
-    },
-    {
-      command: "/sync",
-      category: "Owner",
-      description: "Force refresh Discord command cache (fixes missing slash commands)",
-      usage: "/sync",
-      example: "/sync",
-      output: "Refreshes all commands - use if slash commands don't appear after bot restart",
-    },
   ];
 
   const filteredCommands = commandsList.filter(

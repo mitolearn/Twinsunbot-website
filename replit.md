@@ -25,9 +25,9 @@ Twin Sun Bot is a comprehensive marketing and documentation website for a produc
 - **Pricing:** Production tiers (informational only), "How to Subscribe" guide, comparison table, payout process
   - No website payment buttons - subscriptions handled via Discord bot commands
   - Clear 3-step process: Add Bot → Run /setup → Choose & Pay with QPay
-- **Commands:** Complete documentation (22 commands: Info, Admin, Manager, Analytics, User, Owner categories)
+- **Commands:** Complete documentation (17 commands: Info, Admin, Manager, Analytics, User categories)
   - Command ordering prioritizes admin-focused features (bot_info first, user commands last)
-  - Recently added: /setup and /plan_toggle commands
+  - Owner commands removed from public documentation (internal use only)
 - **About:** Mission statement focused on Mongolian community independence, values, and comprehensive technical architecture
 - **Contact:** Contact form and support information
 
