@@ -102,7 +102,7 @@ export default function Features() {
               <ol className="space-y-2 text-sm text-muted-foreground list-decimal list-inside">
                 <li>Invite bot to Discord server</li>
                 <li>Choose subscription plan (Basic/Pro/Premium)</li>
-                <li>Pay via QPay - bot activates for 30 days</li>
+                <li>Pay via QPay - bot activates for plan duration</li>
                 <li>Create role plans with /plan_add</li>
                 <li>Post payment buttons with /paywall</li>
               </ol>

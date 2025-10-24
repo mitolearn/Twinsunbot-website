@@ -22,9 +22,10 @@ export default function Pricing() {
     {
       name: "Pro",
       price: "149,900",
-      period: "30 days",
+      period: "3 months",
       features: [
         "Everything in Basic",
+        "Complete bot access for 90 days",
         "AI-powered analytics (GPT-4o)",
         "Growth dashboard with charts",
         "Top members leaderboard",
@@ -38,9 +39,10 @@ export default function Pricing() {
     {
       name: "Premium",
       price: "279,900",
-      period: "30 days",
+      period: "180 days",
       features: [
         "Everything in Pro",
+        "Complete bot access for 6 months",
         "Advanced AI business insights",
         "Unlimited role plans",
         "Payout requests (min 100k₮)",

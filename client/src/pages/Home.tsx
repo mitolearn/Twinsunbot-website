@@ -61,7 +61,7 @@ export default function Home() {
     {
       name: "Pro",
       price: "149,900",
-      period: "30 days",
+      period: "3 months",
       features: [
         "Everything in Basic",
         "AI-powered analytics (GPT-4o)",
@@ -73,7 +73,7 @@ export default function Home() {
     {
       name: "Premium",
       price: "279,900",
-      period: "30 days",
+      period: "180 days",
       features: [
         "Everything in Pro",
         "Advanced AI insights",
