@@ -1,6 +1,7 @@
 import PricingCard from "@/components/PricingCard";
 import { Card } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Check, ArrowRight } from "lucide-react";
 
 export default function Pricing() {
   const pricingPlans = [
@@ -77,7 +78,7 @@ export default function Pricing() {
             Simple, Transparent Pricing
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Choose the perfect plan for your community. Pay with QPay and get started instantly.
+            Choose the perfect plan for your community. Subscribe directly through the bot using QPay.
           </p>
         </div>
 
@@ -85,6 +86,70 @@ export default function Pricing() {
           {pricingPlans.map((plan) => (
             <PricingCard key={plan.name} {...plan} />
           ))}
+        </div>
+
+        <div className="mb-20">
+          <Card className="p-8 md:p-12 bg-gradient-to-br from-stellar-blue/5 to-solar-orange/5 border-2 border-stellar-blue/20" data-testid="card-how-to-subscribe">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-foreground mb-3">
+                How to Subscribe
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                All subscriptions are managed through Discord bot commands
+              </p>
+            </div>
+            
+            <div className="max-w-3xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 rounded-full bg-stellar-blue text-white flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                    1
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Add Bot</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Click the button below to add Twin Sun Bot to your Discord server
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-12 h-12 rounded-full bg-stellar-blue text-white flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                    2
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Run /setup</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Use the <code className="bg-muted px-2 py-1 rounded text-stellar-blue">/setup</code> command in your server
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-12 h-12 rounded-full bg-stellar-blue text-white flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+                    3
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Choose & Pay</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Select your plan and complete payment with QPay
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex justify-center">
+                <a 
+                  href="https://discord.com/oauth2/authorize?client_id=1422480366085734430&permissions=1126314640006144&integration_type=0&scope=applications.commands+bot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" className="gap-2" data-testid="button-add-bot-pricing">
+                    Add Bot to Discord
+                    <ArrowRight className="w-5 h-5" />
+                  </Button>
+                </a>
+              </div>
+
+              <p className="text-center text-sm text-muted-foreground mt-6">
+                Need help? Use <code className="bg-muted px-2 py-1 rounded text-stellar-blue">/bot_info</code> command after adding the bot for a complete guide
+              </p>
+            </div>
+          </Card>
         </div>
 
         <div className="mb-20">
@@ -169,10 +234,10 @@ export default function Pricing() {
 
         <div className="bg-card rounded-lg p-8 md:p-12 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">
-            All Plans Include QPay Integration
+            Seamless QPay Integration
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Seamless payment processing with QPay. Support for all major Mongolian payment methods with instant confirmation and automated subscription management.
+            All plans include native QPay payment processing. Members can purchase roles directly through Discord with instant confirmation and automated role assignment.
           </p>
         </div>
       </div>

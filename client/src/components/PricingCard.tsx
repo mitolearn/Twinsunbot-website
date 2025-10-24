@@ -1,5 +1,4 @@
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
 
@@ -31,7 +30,7 @@ export default function PricingCard({ name, price, period, features, isPremium =
           <span className="text-muted-foreground">/{period}</span>
         </div>
       </div>
-      <ul className="space-y-3 mb-6 flex-grow">
+      <ul className="space-y-3 flex-grow">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-2" data-testid={`text-feature-${index}`}>
             <Check className="w-5 h-5 text-stellar-blue shrink-0 mt-0.5" />
@@ -39,14 +38,6 @@ export default function PricingCard({ name, price, period, features, isPremium =
           </li>
         ))}
       </ul>
-      <Button 
-        className="w-full" 
-        variant={isPremium ? "default" : "outline"}
-        data-testid={`button-select-${name.toLowerCase()}`}
-      >
-        Get Started
-      </Button>
-      <p className="text-xs text-muted-foreground text-center mt-3">Pay with QPay</p>
     </Card>
   );
 }
