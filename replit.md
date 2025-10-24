@@ -26,7 +26,7 @@ Twin Sun Bot is a comprehensive marketing and documentation website for a produc
 - **Commands:** Complete documentation (22 commands: Info, Admin, Manager, Analytics, User, Owner categories)
   - Command ordering prioritizes admin-focused features (bot_info first, user commands last)
   - Recently added: /setup and /plan_toggle commands
-- **About:** Vision, values, and comprehensive technical architecture
+- **About:** Mission statement focused on Mongolian community independence, values, and comprehensive technical architecture
 - **Contact:** Contact form and support information
 
 **Discord Bot Integration:**

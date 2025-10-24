@@ -18,28 +18,29 @@ export default function About() {
           <Card className="p-8 md:p-12">
             <div className="prose prose-invert max-w-none">
               <p className="text-lg text-foreground leading-relaxed mb-6">
-                Twin Sun Bot was born from a vision to create independence for Mongolian Discord communities. 
-                Just like binary stars orbiting each other in perfect harmony, our bot brings together payments 
-                and community management in one seamless system.
+                Twin Sun Bot was built with one mission — to make every Mongolian community truly independent. 
+                In a world where most digital tools depend on foreign payment systems and scattered data, 
+                Twin Sun Bot gives local communities full control over their economy and analytics.
               </p>
               
               <p className="text-lg text-foreground leading-relaxed mb-6">
-                We built this platform specifically for Mongolian communities, with native QPay integration 
-                and features designed around local needs. No more relying on international platforms with 
-                complex payment systems. Twin Sun Bot makes it simple to manage subscriptions, track community 
-                data, and grow your Discord server.
+                Our bot unites Discord community management, structured payment automation, and data tracking 
+                into one intelligent system. Through native QPay integration, every transaction, member action, 
+                and growth metric becomes part of a transparent ecosystem — helping community leaders understand 
+                their audience, manage revenue, and build trust.
+              </p>
+
+              <p className="text-lg text-foreground leading-relaxed mb-6">
+                We believe that Mongolian creators and community owners can run fully self-sustaining systems — 
+                without relying on external platforms. Twin Sun Bot is more than a bot — it's the foundation of 
+                a new digital infrastructure where communities own their data, automate their operations, and grow 
+                together with measurable impact.
               </p>
 
               <blockquote className="border-l-4 border-stellar-blue pl-6 my-8 italic text-xl text-muted-foreground">
                 "Created from dust, burned as stars, traveled together, died as black holes, merged, 
                 then disappeared without trace."
               </blockquote>
-
-              <p className="text-lg text-foreground leading-relaxed">
-                This quote embodies our philosophy: communities are born, grow together, and create 
-                something greater than the sum of their parts. Twin Sun Bot is here to support that 
-                journey, from the first member to a thriving ecosystem.
-              </p>
             </div>
           </Card>
         </div>
