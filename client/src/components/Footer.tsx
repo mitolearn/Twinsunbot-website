@@ -4,6 +4,10 @@ import { SiDiscord, SiX } from "react-icons/si";
 import { Mail } from "lucide-react";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="border-t border-border bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -29,21 +33,21 @@ export default function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/">
+                <Link href="/" onClick={scrollToTop}>
                   <button className="text-sm text-muted-foreground hover:text-stellar-blue transition-colors" data-testid="link-footer-home">
                     Home
                   </button>
                 </Link>
               </li>
               <li>
-                <Link href="/features">
+                <Link href="/features" onClick={scrollToTop}>
                   <button className="text-sm text-muted-foreground hover:text-stellar-blue transition-colors" data-testid="link-footer-features">
                     Features
                   </button>
                 </Link>
               </li>
               <li>
-                <Link href="/pricing">
+                <Link href="/pricing" onClick={scrollToTop}>
                   <button className="text-sm text-muted-foreground hover:text-stellar-blue transition-colors" data-testid="link-footer-pricing">
                     Pricing
                   </button>
@@ -56,21 +60,21 @@ export default function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Resources</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/commands">
+                <Link href="/commands" onClick={scrollToTop}>
                   <button className="text-sm text-muted-foreground hover:text-stellar-blue transition-colors" data-testid="link-footer-commands">
                     Commands
                   </button>
                 </Link>
               </li>
               <li>
-                <Link href="/about">
+                <Link href="/about" onClick={scrollToTop}>
                   <button className="text-sm text-muted-foreground hover:text-stellar-blue transition-colors" data-testid="link-footer-about">
                     About
                   </button>
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
+                <Link href="/contact" onClick={scrollToTop}>
                   <button className="text-sm text-muted-foreground hover:text-stellar-blue transition-colors" data-testid="link-footer-contact">
                     Contact
                   </button>

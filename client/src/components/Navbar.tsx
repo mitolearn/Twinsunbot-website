@@ -65,10 +65,16 @@ export default function Navbar() {
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>
-            <Button className="gap-2" data-testid="button-add-to-discord">
-              <SiDiscord className="w-5 h-5" />
-              <span className="hidden sm:inline">Add to Discord</span>
-            </Button>
+            <a 
+              href="https://discord.com/oauth2/authorize?client_id=1422480366085734430&permissions=1126314640006144&integration_type=0&scope=applications.commands+bot"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="gap-2" data-testid="button-add-to-discord">
+                <SiDiscord className="w-5 h-5" />
+                <span className="hidden sm:inline">Add to Discord</span>
+              </Button>
+            </a>
           </div>
         </div>
       </div>

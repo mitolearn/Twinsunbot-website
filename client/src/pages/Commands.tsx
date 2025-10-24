@@ -8,32 +8,24 @@ export default function Commands() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const commandsList = [
-    // User Commands
+    // Bot Info - First Command
     {
-      command: "/buy",
-      category: "User",
-      description: "Browse and purchase role plans privately (ephemeral message)",
-      usage: "/buy",
-      example: "/buy",
-      output: "Shows available role plans with QPay payment buttons in a private message",
+      command: "/bot_info",
+      category: "Info",
+      description: "Complete bot setup guide with feature explanations and best practices",
+      usage: "/bot_info",
+      example: "/bot_info",
+      output: "Comprehensive guide covering all features, commands, and setup instructions",
     },
+    // Admin Commands - Setup & Plan Management
     {
-      command: "/myplan",
-      category: "User",
-      description: "View all your active memberships with expiry timers and renewal status",
-      usage: "/myplan",
-      example: "/myplan",
-      output: "Displays all your roles with expiry dates, color-coded status (Healthy/Expiring/Expired), and renewal options",
+      command: "/setup",
+      category: "Admin",
+      description: "Subscribe to bot (Basic/Pro/Premium)",
+      usage: "/setup",
+      example: "/setup",
+      output: "Shows subscription tiers with QPay payment buttons to rent the bot for your server",
     },
-    {
-      command: "/verifypayment",
-      category: "User",
-      description: "Backup payment verification when payment buttons fail to respond",
-      usage: "/verifypayment",
-      example: "/verifypayment",
-      output: "Manually checks your payment status with QPay and assigns role if payment confirmed",
-    },
-    // Admin Commands - Plan Management
     {
       command: "/plan_add",
       category: "Admin",
@@ -51,12 +43,12 @@ export default function Commands() {
       output: "Shows table of all role plans with ID, role name, price, and description",
     },
     {
-      command: "/plan_edit",
+      command: "/plan_toggle",
       category: "Admin",
-      description: "Modify existing plan (change role or price)",
-      usage: "/plan_edit [plan_id]",
-      example: "/plan_edit 1",
-      output: "Opens editor to update the selected plan's role or price",
+      description: "Enable/disable a plan",
+      usage: "/plan_toggle [plan_id]",
+      example: "/plan_toggle 1",
+      output: "Toggles the plan's active status - disabled plans won't show in /buy or /paywall",
     },
     {
       command: "/plan_delete",
@@ -82,35 +74,10 @@ export default function Commands() {
       example: "/paywall",
       output: "Posts beautiful embed with buttons for each role plan - anyone can click to buy",
     },
-    // Admin Commands - Analytics & Revenue
-    {
-      command: "/status",
-      category: "Admin",
-      description: "View revenue, available balance, and request payout (min 100,000₮)",
-      usage: "/status",
-      example: "/status",
-      output: "Shows total revenue, balance after 3% fee, payout button, and subscription status",
-    },
-    {
-      command: "/growth",
-      category: "Admin",
-      description: "AI-powered analytics dashboard with charts and GPT-4o recommendations",
-      usage: "/growth",
-      example: "/growth",
-      output: "30-day revenue chart, pie chart, growth %, top plans, and AI business advice",
-    },
-    {
-      command: "/topmembers",
-      category: "Admin",
-      description: "View top 10 overall spenders and top 3 per plan with medals",
-      usage: "/topmembers",
-      example: "/topmembers",
-      output: "Leaderboard with top rankings (1st/2nd/3rd place indicators), member names, and total spending",
-    },
-    // Admin Commands - Permissions
+    // Manager Role Commands (Delegate Plan Management)
     {
       command: "/set_manager_role",
-      category: "Admin",
+      category: "Manager",
       description: "Grant a Discord role manager permissions (view stats, no modifications)",
       usage: "/set_manager_role [role]",
       example: "/set_manager_role @Moderator",
@@ -118,7 +85,7 @@ export default function Commands() {
     },
     {
       command: "/view_manager_role",
-      category: "Admin",
+      category: "Manager",
       description: "Check which role currently has manager permissions",
       usage: "/view_manager_role",
       example: "/view_manager_role",
@@ -126,19 +93,61 @@ export default function Commands() {
     },
     {
       command: "/remove_manager_role",
-      category: "Admin",
+      category: "Manager",
       description: "Remove manager permissions from the set role",
       usage: "/remove_manager_role",
       example: "/remove_manager_role",
       output: "Removes manager role permissions (only admins can view stats)",
     },
+    // Analytics & Revenue (Admin Only)
     {
-      command: "/bot_info",
-      category: "Admin",
-      description: "Complete bot setup guide with feature explanations and best practices",
-      usage: "/bot_info",
-      example: "/bot_info",
-      output: "Comprehensive guide covering all features, commands, and setup instructions",
+      command: "/status",
+      category: "Analytics",
+      description: "View revenue, available balance, and request payout (min 100,000₮)",
+      usage: "/status",
+      example: "/status",
+      output: "Shows total revenue, balance after 3% fee, payout button, and subscription status",
+    },
+    {
+      command: "/growth",
+      category: "Analytics",
+      description: "AI-powered analytics dashboard with charts and GPT-4o recommendations",
+      usage: "/growth",
+      example: "/growth",
+      output: "30-day revenue chart, pie chart, growth %, top plans, and AI business advice",
+    },
+    {
+      command: "/topmembers",
+      category: "Analytics",
+      description: "View top 10 overall spenders and top 3 per plan with medals",
+      usage: "/topmembers",
+      example: "/topmembers",
+      output: "Leaderboard with top rankings (1st/2nd/3rd place indicators), member names, and total spending",
+    },
+    // User Commands
+    {
+      command: "/buy",
+      category: "User",
+      description: "Browse and purchase role plans privately (ephemeral message)",
+      usage: "/buy",
+      example: "/buy",
+      output: "Shows available role plans with QPay payment buttons in a private message",
+    },
+    {
+      command: "/myplan",
+      category: "User",
+      description: "View all your active memberships with expiry timers and renewal status",
+      usage: "/myplan",
+      example: "/myplan",
+      output: "Displays all your roles with expiry dates, color-coded status (Healthy/Expiring/Expired), and renewal options",
+    },
+    {
+      command: "/verifypayment",
+      category: "User",
+      description: "Backup payment verification when payment buttons fail to respond",
+      usage: "/verifypayment",
+      example: "/verifypayment",
+      output: "Manually checks your payment status with QPay and assigns role if payment confirmed",
     },
     // Owner Commands
     {

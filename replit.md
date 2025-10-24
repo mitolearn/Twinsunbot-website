@@ -23,14 +23,20 @@ Twin Sun Bot is a comprehensive marketing and documentation website for a produc
 - **Home:** Value proposition, key features, pricing overview, benefits, working "Add Bot to Discord" button
 - **Features:** 11 core capabilities with "How It Works" user flows (5 flows)
 - **Pricing:** Production tiers, feature comparison, payout process
-- **Commands:** Complete documentation (20 commands: 3 User, 13 Admin, 4 Owner)
+- **Commands:** Complete documentation (22 commands: Info, Admin, Manager, Analytics, User, Owner categories)
+  - Command ordering prioritizes admin-focused features (bot_info first, user commands last)
+  - Recently added: /setup and /plan_toggle commands
 - **About:** Vision, values, and comprehensive technical architecture
 - **Contact:** Contact form and support information
 
 **Discord Bot Integration:**
 - Bot Client ID: 1422480366085734430
-- OAuth URL embedded in "Add Bot to Discord" button on home page
+- OAuth URL embedded in both navbar and home page "Add Bot to Discord" buttons
 - Opens Discord authorization in new tab with proper permissions
+
+**Navigation Features:**
+- Footer links automatically scroll to top of page when clicked
+- Smooth scroll behavior for better user experience
 
 The website follows a cosmic binary star visual theme (cyan/blue and yellow/orange orbiting stars) that reinforces the brand identity of bringing together payments and community management in one unified system.
 
