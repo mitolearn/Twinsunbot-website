@@ -22,7 +22,9 @@ Twin Sun Bot is a comprehensive marketing and documentation website for a produc
 **Website Content:**
 - **Home:** Value proposition, key features, pricing overview, benefits, working "Add Bot to Discord" button
 - **Features:** 11 core capabilities with "How It Works" user flows (5 flows)
-- **Pricing:** Production tiers, feature comparison, payout process
+- **Pricing:** Production tiers (informational only), "How to Subscribe" guide, comparison table, payout process
+  - No website payment buttons - subscriptions handled via Discord bot commands
+  - Clear 3-step process: Add Bot → Run /setup → Choose & Pay with QPay
 - **Commands:** Complete documentation (22 commands: Info, Admin, Manager, Analytics, User, Owner categories)
   - Command ordering prioritizes admin-focused features (bot_info first, user commands last)
   - Recently added: /setup and /plan_toggle commands
