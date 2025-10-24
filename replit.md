@@ -20,12 +20,17 @@ Twin Sun Bot is a comprehensive marketing and documentation website for a produc
 - Real-time QPay payment integration
 
 **Website Content:**
-- **Home:** Value proposition, key features, pricing overview, benefits
+- **Home:** Value proposition, key features, pricing overview, benefits, working "Add Bot to Discord" button
 - **Features:** 11 core capabilities with "How It Works" user flows (5 flows)
-- **Pricing:** Production tiers, feature comparison, business model explanation
+- **Pricing:** Production tiers, feature comparison, payout process
 - **Commands:** Complete documentation (20 commands: 3 User, 13 Admin, 4 Owner)
 - **About:** Vision, values, and comprehensive technical architecture
 - **Contact:** Contact form and support information
+
+**Discord Bot Integration:**
+- Bot Client ID: 1422480366085734430
+- OAuth URL embedded in "Add Bot to Discord" button on home page
+- Opens Discord authorization in new tab with proper permissions
 
 The website follows a cosmic binary star visual theme (cyan/blue and yellow/orange orbiting stars) that reinforces the brand identity of bringing together payments and community management in one unified system.
 

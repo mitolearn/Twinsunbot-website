@@ -99,9 +99,15 @@ export default function Home() {
             Automated role sales • QPay integration • AI-powered analytics • Keep 97% of revenue
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg" data-testid="button-hero-add-bot">
-              Add Bot to Discord
-            </Button>
+            <a 
+              href="https://discord.com/oauth2/authorize?client_id=1422480366085734430&permissions=1126314640006144&integration_type=0&scope=applications.commands+bot"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="text-lg" data-testid="button-hero-add-bot">
+                Add Bot to Discord
+              </Button>
+            </a>
             <Link href="/features">
               <Button size="lg" variant="outline" className="text-lg" data-testid="button-hero-view-features">
                 View Features
